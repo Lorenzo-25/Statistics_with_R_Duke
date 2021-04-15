@@ -1,3 +1,5 @@
+# Possible probem with Na value 
+# Need to add na removal before proessing data 
 HistoStats <- function(data,x_axis,binwidth = 100){
         stats<-pull(data,x_axis)
         print.data.frame(summarise(data,
