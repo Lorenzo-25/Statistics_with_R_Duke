@@ -1,7 +1,6 @@
-# Possible probem with Na value 
-# Need to add na removal before proessing data 
 HistoStats <- function(data,x_axis,binwidth = 100){
         stats<-pull(data,x_axis)
+        stats <- stats[!is.na(stats)]
         print.data.frame(summarise(data,
                         "25Quantile_g"= quantile(stats,0.25),
                         "Median_b"= median(stats),
